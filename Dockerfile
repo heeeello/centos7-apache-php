@@ -10,3 +10,6 @@ RUN sed -i \
 # There is a .htaccess which enable ReWrite and other thing
 RUN sed -i '/<Directory \"\/var\/www\/html\">/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/httpd/conf/httpd.conf
 
+ADD entrypoint.sh /entrypoint.sh
+
+CMD /entrypoint.sh
