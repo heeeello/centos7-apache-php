@@ -7,3 +7,4 @@ Changes to original image
 1. /etc/localtime to Asia/Shanghai
 2. date.timezone in /etc/php.ini
 3. Enable `AllowOverride All` for /var/www/html 
+4. Add entrypont.sh to enable do some preconfig before apache start
