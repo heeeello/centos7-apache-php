@@ -1,5 +1,10 @@
 FROM piuma/centos7-apache-php
 
+# Update the base system to support some locales
+RUN yum update -y \
+   && rm -rf /var/cache/yum/* \
+   && yum clean all
+
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN sed -i \
